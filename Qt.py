@@ -1783,9 +1783,7 @@ class MissingMember(object):
 def _install():
     # Default order (customise order and content via QT_PREFERRED_BINDING)
     default_order = ("PySide2", "PyQt5", "PySide", "PyQt4")
-    preferred_order = list(
-        b for b in QT_PREFERRED_BINDING.split(os.pathsep) if b
-    )
+    preferred_order = [b for b in QT_PREFERRED_BINDING.split(os.pathsep) if b]
 
     order = preferred_order or default_order
 

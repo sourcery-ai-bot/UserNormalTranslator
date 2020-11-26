@@ -11,7 +11,7 @@ if not hasattr(sys.modules[__name__], '__file__'):
     __file__ = inspect.getfile(inspect.currentframe())
 
 homedir = os.path.dirname(__file__)
-if not homedir in sys.path:
+if homedir not in sys.path:
     sys.path.append(homedir)
 
 from Qt import QtGui
